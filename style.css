@@ -20,57 +20,106 @@ body {
     align-items: center;
   min-width: 50%;
   border-radius: 1rem;
-  box-shadow: 0 0 5px red;
-  padding: 1rem 0;
+  /* box-shadow: 0 0 5px red; */
+  box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.5);
+  padding: 1rem 0.5rem;
   margin: 1rem 0;
+  position: relative;
 }
 
-.mid {
+.weatherForm {
   display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.weatherForm input[type=text], button[type=submit]{
+  width: 50%;
+  margin-top: 0.5rem;
+  /* gap: 0.5rem; */
+}
+
+.error {
+  position: absolute;
+    top: 30%;
+    left: 50%;
+  display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  transform: translateX(-50%);
+    transition: 1s;
+  width: 50%;
+  height: 50%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg,
+        hsla(0, 53%, 72%, 1),
+        hsla(39, 65%, 61%, 0.25));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.errorDisplay {
+  color: hsla(0, 7%, 5%, 0.75);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.current-container {
+  display: none;
+    flex-direction: column;
+    justify-content: center;
   min-width: 50%;
   border-radius: 1rem;
-  box-shadow: 0 0 5px red;
-  padding: 1rem 0;
+  /* box-shadow: 0 0 5px red; */
+  box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.5);
+  padding: 1rem 0.5rem;
   margin: 1rem 0;
 }
 
-.sub-mid {
+.current {
   display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   width: 100%;
   padding: 0 10px;
 }
 
-/* .mid-left {}
-.mid-right{} */
-
-.bot {
+.current-temp, .current-condition {
   display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+/* .current-condition{} */
+
+.bot {
+  display: none;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
   position: relative;
   min-width: 50%;
   border-radius: 1rem;
-  box-shadow: 0 0 5px red;
-  padding: 1rem 0;
+  box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.5);
+  padding: 1rem 0.5rem;
   margin: 1rem 0;
 }
+
 .scroll{
   display: flex;
     flex-direction: row;
-  overflow: scroll;
-  -webkit-overflow-scrolling: none;
+  /* overflow: scroll;
+  -webkit-overflow-scrolling: none; */
 }
 
-.temp-perHour {
+.cards {
   display: flex;
     flex-direction: column;
     align-items: center;
-  position: absolute;
+  /* position: absolute; */
 }

@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="./style.css">
-    <script></script>
+    <script src="./app.js" defer></script>
   </head>
 
   <body>
     <div class="top">
       <h1>Weather Forecast</h1>
       <h3>Enter a city name to check the weather</h3>
-      <input type="text" placeholder="Enter City Name" aria-placeholder="Enter City Name">
-      <button onclick="getLocation()">Use My Current Location</button>
+      <form class="weatherForm">
+        <input type="text" class="city-input" placeholder="Enter City Name" aria-placeholder="Enter City Name">
+        <button type="submit" class="btn">Use My Current Location</button>
+      </form>
+      <div class="error"></div>
     </div>
 
-    <div class="mid">
-      <h3>long, lat</h3>
-      <div class="sub-mid">
-        <div class="mid-left">
-          <h1>temp</h1>
-          <h3>status</h3>
+
+    <div class="current-container">
+      <div class="current">
+        <div class="current-temp">
+          <!-- <h1>temp</h1>
+          <h3>condition</h3> -->
         </div>
-        <div class="mid-right">
-          <h5>Wind Speed:</h5>
-          <h5>Humidity:</h5>
-          <h5>Precipitation</h5>
+        <div class="current-condition">
+          <!-- <h5 class="wind-speed">Wind Speed:</h5>
+          <h5 class="humidity">Humidity:</h5>
+          <h5 class="precipitation">Precipitation:</h5> -->
         </div>
       </div>
     </div>
@@ -35,10 +38,10 @@
     <div class="bot">
       <h2>24 Hour Forecast</h2>
       <div class="scroll">
-        <div class="temp-perHour">
-          <h5>time</h5>
-          <h3>temp</h3>
-          <h5>status</h5>
+        <div class="cards">
+          <!-- <h5 class="time">time</h5>
+          <h3 class="temp">temp</h3>
+          <h5 class="condition">condition</h5> -->
         </div>
       </div>
     </div>
