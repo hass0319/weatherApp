@@ -6,7 +6,7 @@ const current = document.querySelector(".current");
 const currentTemp = document.querySelector(".current-temp");
 const currentCond = document.querySelector(".current-condition");
 const bot = document.querySelector(".bot");
-const cards = document.querySelector(".cards");
+const scroll = document.querySelector(".scroll");
 const error = document.querySelector(".error");
 
 const apiKey = "W54YENYQ46FSDWASHUV2HUYST";
@@ -53,7 +53,6 @@ function displayWeatherInfoCurrent(data) {
   console.log(data);
 
   currentCont.style.display = "flex";
-  bot.style.display = "flex";
 
   const {
     address: city,
@@ -61,7 +60,7 @@ function displayWeatherInfoCurrent(data) {
       temp,
       humidity,
       feelslike,
-      icon,
+      weatherEmoji,
       conditions,
       windspeed,
       precip,
@@ -75,30 +74,33 @@ function displayWeatherInfoCurrent(data) {
   currentTemp.innerHTML = "";
   currentCond.innerHTML = "";
 
-  const location = document.createElement("h2");
-  const temperature = document.createElement("h1");
-  const weatherCondition = document.createElement("h3");
-  const windSpeed = document.createElement("h3");
-  const humid = document.createElement("h3");
-  const precipitation = document.createElement("h3");
+  const weatherIcon = document.createElement("p");
 
+  const location = document.createElement("p");
   location.classList.add("location");
   location.textContent = `${
     city.trim().charAt(0).toUpperCase() + city.slice(1)
   } ${latitude}, ${longitude}`;
 
+  const temperature = document.createElement("p");
   temperature.classList.add("temperature");
-  temperature.textContent = `${temp} °F`;
+  temperature.textContent = `${(temp - 32 / 1.8).toFixed(1)} °C`;
 
+  const weatherCondition = document.createElement("p");
   weatherCondition.classList.add("conditions");
   weatherCondition.textContent = conditions;
 
+  const windSpeed = document.createElement("p");
   windSpeed.classList.add("wind-speed");
-  windSpeed.textContent = `Wind Speed: ${windspeed} km/h`;
+  windSpeed.textContent = `Wind Speed: ${(windspeed * 1.60934).toFixed(
+    2
+  )} km/h`;
 
+  const humid = document.createElement("p");
   humid.classList.add("humid");
   humid.textContent = `Humidity: ${humidity}%`;
 
+  const precipitation = document.createElement("p");
   precipitation.classList.add("precipitation");
   // checks for null and undefined
   precipitation.textContent = `Precipitation: ${precip ?? 0}%`;
@@ -117,23 +119,32 @@ function displayWeatherInfoCurrent(data) {
 
 function displayWeatherInfoHourly(data) {
   console.log(data);
-  const {
-    datetime,
-    currentConditions: { temp, humidity, icon, conditions },
-  } = data;
 
-  const time = document.createElement("h5");
-  const temperature = document.createElement("h3");
-  const weatherCondition = document.createElement("h5");
+  const hourlyData = data.days[0].hours;
 
-  time.classList.add("time");
-  time.textContent = `${datetime}%`;
+  hourlyData.forEach((hour) => {
+    const { temp, datetime, conditions } = hour;
+    console.log(temp, datetime, conditions);
 
-  temperature.classList.add("temperature");
-  temperature.textContent = `${data.currentConditions.temp} ˚F `;
+    const time = document.createElement("p");
+    time.classList.add("time");
+    time.textContent = `${datetime.split(":")[0]}:00`;
 
-  weatherCondition.classList.add("conditions");
-  weatherCondition.textContent = conditions;
+    const temperature = document.createElement("p");
+    temperature.classList.add("temperature-bot");
+    temperature.textContent = `${(temp - 32 / 1.8).toFixed(1)}°C`;
+
+    const weatherCondition = document.createElement("p");
+    weatherCondition.classList.add("conditions");
+    weatherCondition.textContent = conditions;
+
+    const cards = document.createElement("div");
+    cards.classList.add("cards");
+    cards.append(time, temperature, weatherCondition);
+    scroll.append(cards);
+  });
+
+  bot.style.display = "flex";
 }
 
 function getWeatherEmoji(weatherId) {}
