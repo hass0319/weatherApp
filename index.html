@@ -5,32 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js" defer></script>
   </head>
 
   <body>
     <div class="top">
-      <h1>Weather Forecast</h1>
-      <h3>Enter a city name to check the weather</h3>
+      <h1 class="icon-top"><i class="bi bi-cloud"></i></h1>
+      <h1 class="head">Weather Forecast</h1>
+      <h3 class="sub-head">Enter a city name to check the weather</h3>
       <form class="weatherForm">
-        <input type="text" class="city-input" placeholder="Enter City Name" aria-placeholder="Enter City Name">
+        <div class="input-icon-wrapper">
+          <i class="bi bi-search"></i>
+          <input type="text" class="city-input" placeholder="Enter City Name" aria-placeholder="Enter City Name">
+        </div>
         <button type="submit" class="btn">Use My Current Location</button>
       </form>
       <div class="error"></div>
     </div>
 
-
     <div class="current-container">
       <div class="current">
+        <!-- name -->
         <div class="current-temp">
-          <!-- <h1>temp</h1>
-          <h3>condition</h3> -->
+          <!-- <p>temp</p>
+          <p>condition</p> -->
         </div>
         <div class="current-condition">
-          <!-- <h5 class="wind-speed">Wind Speed:</h5>
-          <h5 class="humidity">Humidity:</h5>
-          <h5 class="precipitation">Precipitation:</h5> -->
+          <!-- <p class="wind-speed">Wind Speed:</p>
+          <p class="humidity">Humidity:</p>
+          <p class="precipitation">Precipitation:</p> -->
         </div>
       </div>
     </div>
@@ -39,9 +44,9 @@
       <h2>24 Hour Forecast</h2>
       <div class="scroll">
         <!-- <div class="cards">
-          <h5 class="time">time</h5>
-          <h3 class="temp">temp</h3>
-          <h5 class="condition">condition</h5>
+          <p class="time">time</p>
+          <p class="temp">temp</p>
+          <p class="condition">condition</p>
         </div> -->
       </div>
     </div>
