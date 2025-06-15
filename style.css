@@ -17,7 +17,6 @@ body {
   /* background: linear-gradient(135deg, #272c38 0%, #131416 100%); */
   background-image: linear-gradient(rgb(24, 24, 27), rgb(0, 0, 0));
   color: hsl(0, 5%, 78%);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .top{
@@ -72,7 +71,7 @@ body {
 .input-icon-wrapper i.bi-search {
   position: absolute;
   left: 13%;
-  top: 50%;
+  top: 53%;
   transform: translateY(-50%);
   color: #b7b8bd;
   font-size: 1.5rem;
@@ -97,6 +96,10 @@ body {
   font-weight: 400;
 }
 
+.bi {
+  margin-right: 0.5em;
+}
+
 button[type=submit]{
   width: 80%;
   margin-top: 0.5rem;
@@ -119,31 +122,28 @@ button[type=submit]:active {
 }
 
 .error {
-  position: absolute;
+  /* position: absolute;
     top: 30%;
     left: 50%;
   display: none;
-    justify-content: center;
-    align-items: center;
     text-align: center;
   transform: translateX(-50%);
-    transition: 1s;
+    transition: 0.15s;
   width: 50%;
-  height: 50%;
+  height: auto;
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 0.5rem;
-  background: linear-gradient(90deg,
-        hsla(0, 53%, 72%, 1),
-        hsla(39, 65%, 61%, 0.25));
+  background: linear-gradient(135deg, #2d3138 0%, #191a1d 100%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  z-index: 100; */
+  display: none;
 }
 
 .errorDisplay {
-  color: hsla(0, 7%, 5%, 0.75);
-  font-size: 1.2rem;
-  font-weight: bold;
+  color: hsl(0, 71%, 46%);
+  font-size: 1rem;
+  font-weight:500;
   margin: 0;
 }
 
@@ -165,7 +165,7 @@ button[type=submit]:active {
   display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   width: 100%;
   padding: 0 10px;
 }
@@ -186,6 +186,18 @@ button[type=submit]:active {
 
 .conditions, .wind-speed, .humid, .precipitation, .time {
   color: rgb(115, 118, 118);
+}
+
+.weather-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.conditions {
+  display: flex;
+  align-items: center;
 }
 
 .bot {
@@ -235,6 +247,13 @@ button[type=submit]:active {
   transform: translateY(-5px);
 }
 
+.cards .conditions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .temperature-bot {
   font-size: 1.25rem;
   font-weight: 300;
@@ -246,7 +265,7 @@ button[type=submit]:active {
   font-weight: 600;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
   .top,
   .current-container,
