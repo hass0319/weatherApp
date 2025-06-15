@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  border: 0 solid #e5e7eb;
   padding: 0;
   margin: 0;
   transition: all 0.15s cubic-bezier(.5, 0, .6, 1.12);
@@ -27,8 +28,10 @@ body {
   min-width: 50%;
   min-height: 50%;
   border-radius: 1rem;
-  background: linear-gradient(135deg, #2d3138 0%, #191a1d 100%);
-  box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.5);
+  /* background: linear-gradient(135deg, #2d3138 0%, #191a1d 100%); */
+  border: 0.5px solid rgb(229, 229, 229);
+  background-image: linear-gradient(rgb(32, 32, 36), rgb(15, 15, 15));
+  box-shadow: 0 0 8px 2px rgb(125, 68, 68, 1);
   padding: 2rem;
   margin: 2rem 0;
   gap: 15px;
@@ -105,7 +108,7 @@ button[type=submit]{
   margin-top: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.7rem;;
-  background: #4a6fa5;
+  background: rgb(63, 63, 70);
   border-color: rgb(63 63 70/var(--tw-border-opacity, 1));
   font-size: 1.25rem;
   font-weight: 500;
@@ -114,29 +117,14 @@ button[type=submit]{
 }
 
 button[type=submit]:hover {
-  background: #5f789d;
+  background: rgb(98, 98, 109);
 }
 
 button[type=submit]:active {
-  transform:translate(1rem);
+  transform:translate(0.5rem);
 }
 
 .error {
-  /* position: absolute;
-    top: 30%;
-    left: 50%;
-  display: none;
-    text-align: center;
-  transform: translateX(-50%);
-    transition: 0.15s;
-  width: 50%;
-  height: auto;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(135deg, #2d3138 0%, #191a1d 100%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 100; */
   display: none;
 }
 
@@ -154,9 +142,10 @@ button[type=submit]:active {
   min-width: 50%;
   min-height: 25%;
   border-radius: 1rem;
-  background: linear-gradient(135deg, #2d3138 0%, #191a1d 100%);
+  border: 0.5px solid rgb(229, 229, 229);
+  background-image: linear-gradient(rgb(32, 32, 36), rgb(15, 15, 15));
+  box-shadow:0 0 8px 2px rgb(125, 68, 68, 1);
   backdrop-filter: blur(10px);
-  box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.5);
   padding: 1rem 0.5rem;
   margin: 1rem 0;
 }
@@ -210,8 +199,9 @@ button[type=submit]:active {
   width: 50%;
   min-height: 25%;
   border-radius: 1rem;
-  background: linear-gradient(135deg, #2d3138 0%, #191a1d 100%);
-  box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.5);
+  box-shadow:0 0 8px 2px rgb(125, 68, 68, 1);
+  border: 0.5px solid rgb(229, 229, 229);
+  background-image: linear-gradient(rgb(32, 32, 36), rgb(7, 7, 7));
   padding: 1rem 0.5rem;
   margin: 1rem 0;
 }
