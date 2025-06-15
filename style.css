@@ -87,7 +87,6 @@ body {
   color: #f7f7f8;
   height: 3.2rem;
   font-weight: 500;
-  box-shadow: none;
 }
 
 .input-icon-wrapper .city-input::placeholder {
@@ -100,10 +99,12 @@ button[type=submit]{
   width: 80%;
   margin-top: 0.5rem;
   padding: 0.5rem;
-  border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;;
   background: #4a6fa5;
   border-color: rgb(63 63 70/var(--tw-border-opacity, 1));
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 3.2rem;
   cursor: pointer;
 }
 
@@ -221,7 +222,6 @@ button[type=submit]:active {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-
   min-width: 80px;
   padding: 1rem;
   border-radius: 0.8rem;
@@ -235,7 +235,7 @@ button[type=submit]:active {
 }
 
 .temperature-bot {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
