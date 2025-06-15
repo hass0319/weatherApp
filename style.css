@@ -223,11 +223,10 @@ button[type=submit]:active {
     justify-items: center;
     align-items: center;
   min-width: 80px;
-  padding: 1rem;
+  padding: 0.75rem;
   border-radius: 0.8rem;
   background: linear-gradient(135deg, #424c5d 0%, #191a1d 100%);
   box-shadow: 0 4px 6px hsl(0, 0%, 0%, 0.1);
-  /* position: absolute; */
 }
 
 .cards:hover {
@@ -237,6 +236,7 @@ button[type=submit]:active {
 .temperature-bot {
   font-size: 1.25rem;
   font-weight: 300;
+  padding: 5px 0;
 }
 
 .time {
