@@ -106,7 +106,7 @@ button[type=submit]{
   border-color: rgb(63 63 70/var(--tw-border-opacity, 1));
   font-size: 1.25rem;
   font-weight: 500;
-  height: 3.2rem;
+  min-height: 3.2rem;
   cursor: pointer;
 }
 
@@ -244,4 +244,35 @@ button[type=submit]:active {
 .time {
   color: #4a6fa5;
   font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+  .top,
+  .current-container,
+  .bot {
+    min-width: 96vw;
+    padding: 1.1rem 0.5rem;
+  }
+
+  .input-icon-wrapper,
+    button[type=submit],
+    .btn {
+      width: 100%;
+      min-width: 160px;
+  }
+
+  .current {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .cards {
+    min-width: 80px;
+    padding: 0.8rem;
+  }
+
+  .temperature {
+    font-size: 2.5rem;
+  }
 }
