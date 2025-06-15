@@ -181,7 +181,7 @@ button[type=submit]:active {
 }
 
 .conditions, .wind-speed, .humid, .precipitation, .time {
-  color: rgb(191, 194, 197);
+  color: rgb(115, 118, 118);
 }
 
 .bot {
