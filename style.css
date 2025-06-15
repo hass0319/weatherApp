@@ -32,6 +32,7 @@ body {
   box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.5);
   padding: 2rem;
   margin: 2rem 0;
+  gap: 15px;
   position: relative;
 }
 
@@ -46,6 +47,7 @@ body {
     justify-content: center;
     align-items: center;
   width: 100%;
+  gap: 10px;
 }
 
 .weatherForm input[type=text]{
