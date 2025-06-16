@@ -282,8 +282,6 @@ function getIcon(iconName, altText = "") {
 
   const iconElement = document.createElement("i");
   iconElement.classList.add("bi", iconClass);
-  // iconElement.style.fontSize = "1.5rem";
-  // iconElement.style.marginRight = "0.5rem";
   return iconElement;
 }
 

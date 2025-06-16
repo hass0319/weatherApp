@@ -23,9 +23,9 @@ A responsive web application that provides current weather conditions and 24-hou
 1. **Get API Key**:
 
    - Register at [Visual Crossing Weather API](https://www.visualcrossing.com/weather-api)
-   - Replace the placeholder API key in `app.js`:
+   - API key in `app.js`:
      ```javascript
-     const apiKey = "YOUR_API_KEY_HERE"; // Replace with your actual key
+     const apiKey = "W54YENYQ46FSDWASHUV2HUYST";
      ```
 
 2. **Run the Application**:
@@ -75,7 +75,3 @@ weather-app/
 - Requires internet connection for API access
 - Geolocation requires HTTPS connection (works on localhost)
 - API has daily request limits (free tier: 1000 requests/day)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
