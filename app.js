@@ -298,7 +298,7 @@ function displayError(message) {
   error.style.display = "block";
   error.appendChild(errorDisplay);
 
-  // setTimeout(() => {
-  //   error.style.display = "none";
-  // }, 3000);
+  setTimeout(() => {
+    error.style.display = "none";
+  }, 3000);
 }
